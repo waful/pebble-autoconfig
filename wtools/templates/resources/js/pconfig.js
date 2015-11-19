@@ -64,8 +64,8 @@ var PConfig = function(){
                 }
                 else if(field.className.indexOf("item-slider") === 0){
                     field.value = decodeURIComponent(params[key]);
-                    var display = document.getElementById(key + "_display");
-                    display.value = decodeURIComponent(params[key]);
+                    var display = document.querySelectorAll("[data-slider-id="+key+"]");
+                    display[0].value = decodeURIComponent(params[key]);
                 }
                 else{
                     field.value = decodeURIComponent(params[key]);
